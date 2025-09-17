@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ブロック崩しであそぶ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ブロック崩しであそぶ</h1>
+      <p>右側のコンフィグから棒の長さとボールの大きさを調整しながら、ゲームを楽しみましょう！</p>
+    </header>
+    <main class="layout">
+      <section class="game-panel" aria-label="ゲームエリア">
+        <canvas id="gameCanvas" width="640" height="480" role="img" aria-label="ブロック崩しのプレイ画面"></canvas>
+        <div class="status">
+          <p>スコア: <span id="score">0</span></p>
+          <p>残りライフ: <span id="lives">3</span></p>
+        </div>
+      </section>
+      <section class="config-panel" aria-label="コンフィグエリア">
+        <h2>コンフィグ</h2>
+        <form>
+          <label for="paddleLength">棒の長さ</label>
+          <input
+            type="range"
+            id="paddleLength"
+            name="paddleLength"
+            min="60"
+            max="220"
+            value="120"
+          />
+          <p class="value-display"><span id="paddleLengthValue">120</span> px</p>
+
+          <label for="ballSize">ボールの大きさ</label>
+          <input
+            type="range"
+            id="ballSize"
+            name="ballSize"
+            min="6"
+            max="24"
+            value="12"
+          />
+          <p class="value-display"><span id="ballSizeValue">12</span> px</p>
+        </form>
+        <div class="tips">
+          <h3>遊び方</h3>
+          <ul>
+            <li>左右キーで棒を操作。マウスでも操作できます。</li>
+            <li>ボールを落とさずにブロックを壊しましょう。</li>
+            <li>コンフィグで棒とボールのサイズを調整できます。</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
