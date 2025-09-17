@@ -1,0 +1,2 @@
+# GPT-DE-ASOBITAI
+GPTであそびたい
